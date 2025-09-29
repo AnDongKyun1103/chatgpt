@@ -1,0 +1,124 @@
+/* Google Fonts 불러오기 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* 전체 요소에 Poppins 폰트 적용, 없으면 기본 sans-serif */
+* { font-family: 'Roboto', sans-serif; }
+
+/* container */
+.container {
+    max-width: 920px;          /* 최대 가로 폭 */
+    height: 100vh;             /* 전체 화면 높이 */
+    display: flex;             /* flexbox 레이아웃 */
+    flex-direction: column;    /* 세로 방향 배치 */
+    justify-content: space-between; /* 위아래로 공간 분배 */
+    margin: 0 auto;            /* 가운데 정렬 */
+}
+
+/* 전체 배경 */
+html, body { height: 100%; }   /* 전체 문서 높이를 100%로 */
+body {
+    margin: 0;                 /* 기본 여백 제거 */
+    background-color: #2b2b35; /* 어두운 배경색 */
+    color: #e8e8ea;            /* 기본 텍스트 색상 */
+}
+
+/* header */
+.header {
+    display: flex;
+    align-items: center;       /* 세로 가운데 정렬 */
+    justify-content: center;   /* 가로 가운데 정렬 */
+    color: #cccccc;            /* 글자색 */
+    border-bottom: 1px solid #5c5c66; /* 아래 테두리 */
+    height: 45px;              /* 높이 */
+}
+.header h3 {
+    font-size: 17px;
+    font-weight: 500;          /* 글자 두께 */
+}
+
+/* info */
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;        /* 안쪽 여백 */
+}
+.info a {
+    color: #ffffff;            /* 링크 색상 */
+    text-decoration: none;     /* 밑줄 제거 */
+    font-size: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease; /* hover 효과 부드럽게 */
+}
+.info a:hover {
+    color: #C59CF4;            /* 마우스 올렸을 때 보라색 */
+}
+
+/* chat-container */
+.chat-container {
+    flex: 1;                   /* 남은 공간 모두 차지 */
+    display: flex;
+    align-items: center;       /* 세로 가운데 정렬 */
+    justify-content: center;   /* 가로 가운데 정렬 */
+    padding: 24px 16px;        /* 여백 */
+}
+
+/* 채팅 로그 박스 */
+#chat-log {
+    width: 100%;               /* 가로 100% */
+    max-width: 860px;          /* 최대 가로 폭 제한 */
+    height: 100%;              /* 높이 꽉 채우기 */
+    min-height: 320px;         /* 최소 높이 */
+    background-color: #33333d; /* 박스 배경 */
+    border: 1px solid #5c5c66; /* 테두리 */
+    border-radius: 12px;       /* 모서리 둥글게 */
+    padding: 24px;             /* 안쪽 여백 */
+    overflow-y: auto;          /* 세로 스크롤 */
+}
+
+/* input-container */
+.input-container {
+    background-color: #2e2e38; /* 배경 */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #5c5c66; /* 위쪽 경계선 */
+    position: sticky;          /* 화면 아래 고정 */
+    bottom: 0;
+}
+
+/* 입력창 */
+#user-input {
+    background-color: #3f3f4c;
+    color: #ffffff;
+    border: none;
+    outline: none;             /* 포커스 테두리 제거 */
+    padding: 8px;
+    flex: 9;                   /* 넓게 차지 */
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 5px;
+}
+#user-input::placeholder {
+    color: #8e8e8e;         
+    font-weight: 400;
+}
+
+/* send-button */
+#send-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #C59CF4; /* 보라 버튼 */
+    color: #ffffff;
+    cursor: pointer;           /* 마우스 올리면 손가락 모양 */
+    margin-left: 15px;         /* 입력창과 간격 */
+    transition: all 0.3s ease; /* hover 효과 */
+}
+#send-button:hover {
+    background-color: #9f75cf; /* hover 시 진한 보라 */
+}
